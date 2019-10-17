@@ -1,0 +1,17 @@
+{
+  "name": "skill-heyTeddy-nodejs",
+  "version": "1.0.0",
+  "description": "heyTeddy skill.",
+  "main": "index.js",
+  
+  "keywords": [
+    "alexa",
+    "skill",
+    "heyTeddy"
+  ],
+  "author": "Yoonji Kim",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "alexa-sdk": "^1.0.12"
+  }
+}

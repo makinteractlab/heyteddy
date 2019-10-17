@@ -1,0 +1,1606 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "heyteddy",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ProtalkActionIntent",
+                    "slots": [
+                        {
+                            "name": "action",
+                            "type": "ACTION"
+                        },
+                        {
+                            "name": "pinId",
+                            "type": "PINNUMBER"
+                        },
+                        {
+                            "name": "pinType",
+                            "type": "TYPE"
+                        },
+                        {
+                            "name": "dValue",
+                            "type": "DVALUE"
+                        },
+                        {
+                            "name": "aValue",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "label",
+                            "type": "AMAZON.Language"
+                        }
+                    ],
+                    "samples": [
+                        "{action} {pinType} {pinId} {dValue}",
+                        "then {action} {pinType} {pinId} {dValue}",
+                        "{action} {pinId} {dValue}",
+                        "then {action} {pinId} {dValue}",
+                        "{action} {dValue} {pinType} {pinId}",
+                        "{action} {dValue} {pinId}",
+                        "then {action} {dValue} {pinType} {pinId}",
+                        "then {action} {dValue} {pinId}",
+                        "{action} {pinType} {pinId} {aValue}",
+                        "then {action} {pinType} {pinId} {aValue}",
+                        "{action} {pinId} {aValue}",
+                        "{action} {aValue} {pinType} {pinId}",
+                        "{action} {aValue} {pinId}",
+                        "then {action} {aValue} {pinId}",
+                        "then {action} {aValue} {pinType} {pinId}",
+                        "then {action} {pinId} {aValue}",
+                        "{action} {pinId}",
+                        "{action} {aValue}",
+                        "{action} {dValue}",
+                        "then {action} {pinId}",
+                        "then {action} {aValue}",
+                        "then {action} {dValue}",
+                        "{action} {dValue} to {pinId}",
+                        "{action} {dValue} on {pinId}",
+                        "{action} {aValue} to {pinId}",
+                        "{action} {aValue} on {pinId}",
+                        "{action} {dValue} to {pinType} {pinId}",
+                        "{action} {dValue} on {pinType} {pinId}",
+                        "{action} {aValue} to {pinType} {pinId}",
+                        "{action} {aValue} on {pinType} {pinId}",
+                        "then {action} {dValue} to {pinId}",
+                        "then {action} {dValue} on {pinId}",
+                        "then {action} {aValue} to {pinId}",
+                        "then {action} {aValue} on {pinId}",
+                        "then {action} {dValue} to {pinType} {pinId}",
+                        "then {action} {dValue} on {pinType} {pinId}",
+                        "then {action} {aValue} to {pinType} {pinId}",
+                        "then {action} {aValue} on {pinType} {pinId}",
+                        "{pinId} {dValue}",
+                        "{pinId} {aValue}",
+                        "then {pinId} {dValue}",
+                        "then {pinId} {aValue}",
+                        "then",
+                        "{action} {label} {dValue}",
+                        "{action} {label} {aValue}",
+                        "{action} {dValue} {label}",
+                        "{action} {aValue} {label}"
+                    ]
+                },
+                {
+                    "name": "ProtalkDoAfterIntent",
+                    "slots": [
+                        {
+                            "name": "time",
+                            "type": "AMAZON.DURATION"
+                        }
+                    ],
+                    "samples": [
+                        "doafter {time}",
+                        "do after {time}",
+                        "do after",
+                        "doafter"
+                    ]
+                },
+                {
+                    "name": "ProtalkGetMoreInfoIntent",
+                    "slots": [
+                        {
+                            "name": "action",
+                            "type": "ACTION"
+                        },
+                        {
+                            "name": "pinId",
+                            "type": "PINNUMBER"
+                        },
+                        {
+                            "name": "pinType",
+                            "type": "TYPE"
+                        },
+                        {
+                            "name": "dValue",
+                            "type": "DVALUE"
+                        },
+                        {
+                            "name": "aValue",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "ioType",
+                            "type": "IO"
+                        },
+                        {
+                            "name": "compare",
+                            "type": "COMPARE"
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.DURATION"
+                        },
+                        {
+                            "name": "cancel",
+                            "type": "CANCEL"
+                        },
+                        {
+                            "name": "state",
+                            "type": "STATE"
+                        },
+                        {
+                            "name": "endValue",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "component",
+                            "type": "COMPONENT"
+                        }
+                    ],
+                    "samples": [
+                        "{component}",
+                        "{endValue}",
+                        "{pinId}",
+                        "{action}",
+                        "{dValue}",
+                        "{aValue}",
+                        "{ioType}",
+                        "{compare}",
+                        "{time}",
+                        "{cancel}",
+                        "{state}",
+                        "{pinType}",
+                        "{aValue} times"
+                    ]
+                },
+                {
+                    "name": "ProtalkGroupIntent",
+                    "slots": [
+                        {
+                            "name": "state",
+                            "type": "STATE"
+                        }
+                    ],
+                    "samples": [
+                        "Group {state}",
+                        "Group",
+                        "{state} group"
+                    ]
+                },
+                {
+                    "name": "ProtalkDescribeIntent",
+                    "slots": [
+                        {
+                            "name": "component",
+                            "type": "COMPONENT"
+                        }
+                    ],
+                    "samples": [
+                        "explain the {component}",
+                        "tell me about {component}",
+                        "tell me about this {component}",
+                        "explain about {component}",
+                        "describe {component}",
+                        "{component} detail",
+                        "details of {component}",
+                        "tell me details of {component}",
+                        "Can you tell me the details of {component}",
+                        "Can you tell me the details of the {component}",
+                        "Can you tell me the details of a {component}",
+                        "I want to know a {component} in detail.",
+                        "I want to know the {component} in detail.",
+                        "Tell me the details of {component}",
+                        "I want to know {component} in detail.",
+                        "Tell me the details of a {component}",
+                        "Tell me the details of the {component}"
+                    ]
+                },
+                {
+                    "name": "ProtalkHowToIntent",
+                    "slots": [
+                        {
+                            "name": "component",
+                            "type": "COMPONENT"
+                        }
+                    ],
+                    "samples": [
+                        "Show me",
+                        "Tell me about",
+                        "How to use",
+                        "How can I use",
+                        "How to use {component}",
+                        "Show me the guide of the {component}",
+                        "Show me the guide of {component}",
+                        "How can I use {component}",
+                        "How can I connect {component}",
+                        "How can I wire {component}",
+                        "How to wire {component}",
+                        "How can I connect the {component}",
+                        "Show me the picture of {component}",
+                        "Show me the picture of the {component}",
+                        "Show me {component}",
+                        "Show me the {component}",
+                        "Show me how to use {component}",
+                        "Show me how to use the {component}",
+                        "Show me how to use a {component}",
+                        "Show me a {component}",
+                        "Show {component}",
+                        "what is {component}",
+                        "How about {component}",
+                        "I want to know {component}",
+                        "what about {component}",
+                        "what should I do for {component}"
+                    ]
+                },
+                {
+                    "name": "ProtalkIfIntent",
+                    "slots": [
+                        {
+                            "name": "pinId",
+                            "type": "PINNUMBER"
+                        },
+                        {
+                            "name": "pinType",
+                            "type": "TYPE"
+                        },
+                        {
+                            "name": "compare",
+                            "type": "COMPARE"
+                        },
+                        {
+                            "name": "aValue",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "dValue",
+                            "type": "DVALUE"
+                        }
+                    ],
+                    "samples": [
+                        "if {pinId} {compare} {dValue}",
+                        "if {pinType} {pinId} {compare} {dValue}",
+                        "if {pinId} {compare} {aValue}",
+                        "if {pinType} {pinId} {compare} {aValue}",
+                        "if {pinId} {compare}",
+                        "if {pinId}",
+                        "if {pinType} {pinId}"
+                    ]
+                },
+                {
+                    "name": "ProtalkLabelIntent",
+                    "slots": [
+                        {
+                            "name": "pinId",
+                            "type": "PINNUMBER"
+                        },
+                        {
+                            "name": "pinType",
+                            "type": "TYPE"
+                        },
+                        {
+                            "name": "label",
+                            "type": "AMAZON.Language"
+                        }
+                    ],
+                    "samples": [
+                        "Label {label} {pinId}",
+                        "Label {label}",
+                        "Label {label} {pinType} {pinId}"
+                    ]
+                },
+                {
+                    "name": "ProtalkPipeIntent",
+                    "slots": [
+                        {
+                            "name": "fromPin",
+                            "type": "PINNUMBER"
+                        },
+                        {
+                            "name": "fromPinType",
+                            "type": "TYPE"
+                        },
+                        {
+                            "name": "toPin",
+                            "type": "PINNUMBER"
+                        },
+                        {
+                            "name": "toPinType",
+                            "type": "TYPE"
+                        }
+                    ],
+                    "samples": [
+                        "pipe {fromPin} to {toPin}",
+                        "pipe {fromPin} and {toPin}",
+                        "pipe {fromPin}",
+                        "pipe {fromPinType} {fromPin}",
+                        "pipe {fromPinType} {fromPin} {toPinType} {toPin}",
+                        "pipe {fromPinType} {fromPin} {toPin}",
+                        "pipe {fromPinType}",
+                        "pipe {fromPinType} {fromPin} and {toPinType} {toPin}",
+                        "pipe {fromPinType} {fromPin} to {toPinType} {toPin}",
+                        "pipe {fromPinType} {fromPin} to {toPin}",
+                        "pipe {fromPinType} {fromPin} and {toPin}",
+                        "pipe",
+                        "pass data from {fromPin} to {toPin}",
+                        "pass data {fromPin}",
+                        "pass data {fromPinType} {fromPin}",
+                        "pass data from {fromPin}",
+                        "pass data from {fromPinType} {fromPin}",
+                        "pass data {fromPinType} {fromPin} {toPinType} {toPin}",
+                        "pass data {fromPinType} {fromPin} to {toPinType} {toPin}",
+                        "pass data from {fromPinType} {fromPin} to {toPinType} {toPin}",
+                        "pass data {fromPinType} {fromPin} {toPin}",
+                        "pass data from {fromPinType} {fromPin} to {toPin}",
+                        "pass data from {fromPinType}",
+                        "pass data {fromPinType}",
+                        "pass data {fromPinType} {fromPin} to {toPin}",
+                        "pass data from"
+                    ]
+                },
+                {
+                    "name": "ProtalkPulseIntent",
+                    "slots": [
+                        {
+                            "name": "pinId",
+                            "type": "PINNUMBER"
+                        },
+                        {
+                            "name": "period",
+                            "type": "AMAZON.DURATION"
+                        },
+                        {
+                            "name": "repetitions",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "periodMsec",
+                            "type": "MSEC"
+                        }
+                    ],
+                    "samples": [
+                        "pulse {pinId}",
+                        "Pulse {pinId} {repetitions} times at {period} intervals.",
+                        "Pulse {pinId} {repetitions} times",
+                        "Pulse {pinId} {repetitions} times at {period}",
+                        "Pulse {pinId} {repetitions} {period}",
+                        "Pulse {pinId} for {repetitions} times in {period}",
+                        "pulse {pinId} {period} {repetitions}",
+                        "pulse {pinId} in {period} for {repetitions} times",
+                        "pulse {period}",
+                        "pulse in {period} for {repetitions} times to {pinId}",
+                        "pulse {periodMsec}",
+                        "pulse {pinId} {periodMsec} {repetitions}",
+                        "Pulse {pinId} {repetitions} times at {periodMsec} intervals.",
+                        "Pulse {pinId} {repetitions} times at {periodMsec}",
+                        "Pulse {pinId} for {repetitions} times in {periodMsec}",
+                        "pulse {pinId} in {periodMsec} for {repetitions} times",
+                        "pulse in {periodMsec} for {repetitions} times to {pinId}",
+                        "pulse"
+                    ]
+                },
+                {
+                    "name": "ProtalkResetAllIntent",
+                    "slots": [],
+                    "samples": [
+                        "reset all",
+                        "clear"
+                    ]
+                },
+                {
+                    "name": "ProtalkResetIntent",
+                    "slots": [
+                        {
+                            "name": "pinId",
+                            "type": "PINNUMBER"
+                        },
+                        {
+                            "name": "pinType",
+                            "type": "TYPE"
+                        }
+                    ],
+                    "samples": [
+                        "reset {pinType} {pinId}",
+                        "reset {pinId}"
+                    ]
+                },
+                {
+                    "name": "ProtalkRestartIntent",
+                    "slots": [
+                        {
+                            "name": "system",
+                            "type": "DEBUGMODE"
+                        }
+                    ],
+                    "samples": [
+                        "restart",
+                        "reboot {system}"
+                    ]
+                },
+                {
+                    "name": "ProtalkSetIntent",
+                    "slots": [
+                        {
+                            "name": "pinId",
+                            "type": "PINNUMBER"
+                        },
+                        {
+                            "name": "pinType",
+                            "type": "TYPE"
+                        },
+                        {
+                            "name": "ioType",
+                            "type": "IO"
+                        }
+                    ],
+                    "samples": [
+                        "set {pinId} {ioType}",
+                        "set {ioType} {pinId}",
+                        "set {pinId} as {ioType}",
+                        "set {ioType} on {pinId}",
+                        "set {pinId}",
+                        "set {ioType}",
+                        "set",
+                        "set {pinType} {pinId}",
+                        "set {pinType} {pinId} {ioType}"
+                    ]
+                },
+                {
+                    "name": "ProtalkWaitIntent",
+                    "slots": [],
+                    "samples": [
+                        "hold on",
+                        "just a second",
+                        "wait"
+                    ]
+                },
+                {
+                    "name": "ProtalkIfBetweenIntent",
+                    "slots": [
+                        {
+                            "name": "pinId",
+                            "type": "PINNUMBER"
+                        },
+                        {
+                            "name": "endValue",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "aValue",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "if {pinId} between {aValue} and",
+                        "if {pinId} between {aValue}",
+                        "if {pinId} between",
+                        "if {pinId} between {aValue} and {endValue}",
+                        "if {pinId} is between {aValue} and",
+                        "if {pinId} is between {aValue}",
+                        "if {pinId} is between",
+                        "if {pinId} is between {aValue} and {endValue}"
+                    ]
+                },
+                {
+                    "name": "ProtalkSelectModeIntent",
+                    "slots": [
+                        {
+                            "name": "mode",
+                            "type": "MODE"
+                        }
+                    ],
+                    "samples": [
+                        "{mode}"
+                    ]
+                },
+                {
+                    "name": "ProtalkChangeMode",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "ProtalkGuideIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "ProtalkHandleStepsIntent",
+                    "slots": [
+                        {
+                            "name": "control",
+                            "type": "CONTROL"
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "ProtalkDebugIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "ProtalkAskNumberIntent",
+                    "slots": [
+                        {
+                            "name": "number",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "action",
+                            "type": "ACTION"
+                        },
+                        {
+                            "name": "pinId",
+                            "type": "PINNUMBER"
+                        },
+                        {
+                            "name": "pinType",
+                            "type": "TYPE"
+                        },
+                        {
+                            "name": "dValue",
+                            "type": "DVALUE"
+                        },
+                        {
+                            "name": "aValue",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "ioType",
+                            "type": "IO"
+                        },
+                        {
+                            "name": "compare",
+                            "type": "COMPARE"
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.DURATION"
+                        },
+                        {
+                            "name": "cancel",
+                            "type": "CANCEL"
+                        },
+                        {
+                            "name": "state",
+                            "type": "STATE"
+                        },
+                        {
+                            "name": "endValue",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "component",
+                            "type": "COMPONENT"
+                        }
+                    ],
+                    "samples": [
+                        "{number}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": [
+                        "yes"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": [
+                        "no"
+                    ]
+                },
+                {
+                    "name": "ProtalkHWTestIntent",
+                    "slots": [
+                        {
+                            "name": "component",
+                            "type": "COMPONENT"
+                        }
+                    ],
+                    "samples": [
+                        "test",
+                        "check",
+                        "check the {component}",
+                        "test the {component}",
+                        "check {component}",
+                        "test {component}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "ACTION",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "write"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "read"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CANCEL",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "cancel",
+                                "synonyms": [
+                                    "cancel command"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "COMPARE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "is greater than",
+                                "synonyms": [
+                                    ">"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is greater than or equal to",
+                                "synonyms": [
+                                    ">="
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is less than or equal to",
+                                "synonyms": [
+                                    "<="
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is less than",
+                                "synonyms": [
+                                    "<"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is not",
+                                "synonyms": [
+                                    "!="
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is",
+                                "synonyms": [
+                                    "=="
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "COMPONENT",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "color light"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "l.e.d."
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "light",
+                                "synonyms": [
+                                    "Eleedi"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "light emitting diode"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hall sensor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tilt sensor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "piezo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "flex sensor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hall effect sensor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "wind sensor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "anemometer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "temperature sensor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "servo motor",
+                                "synonyms": [
+                                    "Servo",
+                                    "motor"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "button",
+                                "synonyms": [
+                                    "Switch"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "potentiometer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "photo resistor",
+                                "synonyms": [
+                                    "Photo cell",
+                                    "Light dependent resistor",
+                                    "Photo conductive cell"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "rotary encoder"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "board"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "task"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CONDITION",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "if"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "then"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DEBUGMODE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "system"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "protalk"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DVALUE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "high"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "low"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "IO",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "input"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "output"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MSEC",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "10 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "20 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "30 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "40 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "50 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "60 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "70 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "80 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "90 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "100 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "110 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "120 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "130 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "140 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "150 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "160 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "170 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "180 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "190 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "200 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "210 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "220 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "230 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "240 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "250 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "260 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "270 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "280 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "290 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "300 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "310 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "320 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "330 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "340 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "350 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "360 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "370 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "380 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "390 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "400 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "410 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "420 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "430 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "440 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "450 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "460 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "470 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "480 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "490 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "500 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "510 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "520 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "530 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "540 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "550 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "560 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "570 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "580 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "590 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "600 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "610 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "620 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "630 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "640 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "650 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "660 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "670 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "680 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "690 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "700 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "710 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "720 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "730 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "740 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "750 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "760 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "770 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "780 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "790 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "800 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "810 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "820 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "830 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "840 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "850 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "860 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "870 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "880 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "890 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "900 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "910 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "920 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "930 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "940 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "950 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "960 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "970 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "980 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "990 miliseconds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "1000 miliseconds"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PINNUMBER",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "pin 0",
+                                "synonyms": [
+                                    "pin0"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pin 1",
+                                "synonyms": [
+                                    "pin1"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pin 2",
+                                "synonyms": [
+                                    "pin2"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pin 3",
+                                "synonyms": [
+                                    "pin3"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pin 4",
+                                "synonyms": [
+                                    "pin4"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pin 5",
+                                "synonyms": [
+                                    "pin5"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pin 6",
+                                "synonyms": [
+                                    "pin6"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pin 7",
+                                "synonyms": [
+                                    "pin7"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pin 8",
+                                "synonyms": [
+                                    "pin8"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pin 9",
+                                "synonyms": [
+                                    "pin9"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pin 10",
+                                "synonyms": [
+                                    "pin10"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pin 11",
+                                "synonyms": [
+                                    "pin11"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pin 12",
+                                "synonyms": [
+                                    "pin12"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pin 13",
+                                "synonyms": [
+                                    "pin13"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "STATE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "start"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "end"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TRASH",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "hahahahah"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "gigigigigi"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TYPE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "digital"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "analog"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MODE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "task guide"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "prototyping"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CONTROL",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Restart"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Back",
+                                "synonyms": [
+                                    "go back",
+                                    "Previous"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Next",
+                                "synonyms": [
+                                    "go next"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
