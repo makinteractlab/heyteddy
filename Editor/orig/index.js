@@ -296,12 +296,7 @@ function handleHowtoIntent (intentObj, component) {
     }
     intentObj.attributes.repromptSpeech = intentObj.t('PROTALK_REPROMPT');
     switch(component) {
-        /* DO NOT REMOVE THIS COMMENT: function handleHowtoIntent - user define howto will be added here */
-		case "light sensor":
-			component = "light sensor";
-			speechOutput += "Here is an example of using a " + component + ". <break time=\"10s\" />";
-			speechOutput += "Just say, \" Check " + component + " \" or \"Test " + component + " \" if you want to test your component.  <break time=\"10s\" />";
-			break;
+        /* DO NOT REMOVE THIS COMMENT: function handleHowtoIntent - user define test will be added here */
         case "rotary encoder":
         case "rotaryencoder":
         case "potentiometer":
@@ -331,9 +326,9 @@ function handleHowtoIntent (intentObj, component) {
         case "motor":
             component = "motor";
             speechOutput += "Here is an example of using a " + component + ". <break time=\"0.1s\" />";
-            speechOutput += "First, you need to connect the brown color wire of the motor to the ground rail on the breadboard. <break time=\"5s\" /> ";
-            speechOutput += "Second, connect the orange color wire to an analog output pin on the Arduino. There are six analog output pins on the right side of the Arduino. <break time=\"10s\" /> ";
-            speechOutput += "Last, connect the red color wire of the motor to power rail on the breadboard. <break time=\"10s\" /> ";
+            speechOutput += "First, you need to connect the third leg of the motor to the ground rail on the breadboard. <break time=\"5s\" /> ";
+            speechOutput += "Second, connect the third leg to an analog input pin on the Arduino. There are six analog input pins on the left side of the Arduino. <break time=\"10s\" /> ";
+            speechOutput += "Last, connect the middle leg of the motor to power rail on the breadboard. <break time=\"10s\" /> ";
             speechOutput += "Just say, \" Check " + component + " \" or \"Test " + component + " \" if you want to test your component. <break time=\"10s\" />";
             //intentObj.attributes.repromptSpeech = "If you want to know about the motor in detail, just say \"Explain the motor.\" or \"Tell me about the motor.\".";
             break;
@@ -382,17 +377,9 @@ function handleHowtoIntent (intentObj, component) {
             speechOutput += "Just say, \" Check Button \" or \"Test Button \", if you want to test your component. <break time=\"5s\" />";
             //intentObj.attributes.repromptSpeech = "If you want to know about the button in detail, just say \"Explain the button.\" or \"Tell me about the button.\".";
             break;
-        case "switch":
-            speechOutput +=  "Here is an example of using a " + component + ". <break time=\"0.1s\" />";
-            speechOutput += "Just say, \" Check switch \" or \"Test switch \", if you want to test your component. <break time=\"5s\" />";
-            //intentObj.attributes.repromptSpeech = "If you want to know about the button in detail, just say \"Explain the button.\" or \"Tell me about the button.\".";
-            break;
         case "wind sensor":
         case "anemometer":
-            speechOutput += "Here is an example of using an anemometer. <break time=\"0.1s\" />";
-            speechOutput += "First, you need to connect the ground pin of the sensor to the ground rail on the breadboard. <break time=\"5s\" />";
-            speechOutput += "Second, connect the outpin to an analog input pin on the Arduino. There are six analog input pins on the left side of the Arduino. <break time=\"5s\" />";
-            speechOutput += "Last, connect the vcc pin of the sensor to power rail on the breadboard. <break time=\"5s\" />";
+            speechOutput +=  "Here is an example of using a " + component + ". <break time=\"0.1s\" />";
             speechOutput += "Just say, \" Check anemometer \" or \"Test anemometer \", if you want to test your component. <break time=\"5s\" />";
             //intentObj.attributes.repromptSpeech = "If you want to know about the button in detail, just say \"Explain the button.\" or \"Tell me about the button.\".";
             break;
@@ -401,14 +388,7 @@ function handleHowtoIntent (intentObj, component) {
             speechOutput +=  "Here is an example of using a " + component + ". <break time=\"0.1s\" />";
             break;
         case "flex sensor":
-            speechOutput += "Here is an example of using a " + component + ". <break time=\"0.1s\" />";
-            speechOutput += "First, you need to place a flex sensor on the breadboard.  <break time=\"5s\" />";
-            speechOutput += "Next, put a 10 KiloOhms resistor beside the black wire of the sensor. <break time=\"5s\" />";
-            speechOutput += "Then, wire from the resistor's leg, which is connected to the sensor to an analog input pin of Arduino. There are six analog input pins on the left side of the Arduino. <break time=\"5s\" />";
-            speechOutput += "After that, connect the red wire of the sensor to the power rail on the breadboard. <break time=\"5s\" />";
-            speechOutput += "Last, connect the wire from another leg of the resistor to the ground rail on the breadboard. <break time=\"5s\" />";
-            speechOutput += "Just say, \" Check flex sensor \" or \"Test flex sensor \", if you want to test your component. <break time=\"5s\" />";
-            //intentObj.attributes.repromptSpeech = "If you want to know about the button in detail, just say \"Explain the button.\" or \"Tell me about the button.\".";
+            speechOutput +=  "Here is an example of using a " + component + ". <break time=\"0.1s\" />";
             break;
         case "piezo":
             speechOutput +=  "Here is an example of using a " + component + ". <break time=\"0.1s\" />";
@@ -685,7 +665,7 @@ function handleProtalkPipeIntent(intentObj, fromPin, fromPinType, toPin, toPinTy
     itemData ["action"] = "pipe";
     itemData ["params"] = params;
     
-    speechOutput = "Pass data from ";
+    speechOutput = "Pipe ";
     speechOutput += "pin " + _fromPin + " to ";
     speechOutput += "pin " + _toPin;
     handleObj(intentObj, intentName, itemData, speechOutput);
@@ -1026,12 +1006,6 @@ function handleHardwareDebug(intentObj) {
         if(intentObj.attributes.state == "hw_debug") component = intentObj.attributes.prevComponent;
         switch(component) {
             /* DO NOT REMOVE THIS COMMENT: function handleHardwareDebug - user define test will be added here */
-			case "light sensor":
-				readPinJson(intentObj);
-				intentObj.attributes.pinType = "analog";
-				speechOutput = "Now, I'm reading the input pin. Does the light sensor work?";
-				repromptSpeech = "Does the light sensor work?";
-				break;
             case "servo motor":
             case "motor":
                 writeMotorJson(intentObj);
@@ -1205,13 +1179,6 @@ function handleHWTest(intentObj, component) {
     
     switch(component) {
         /* DO NOT REMOVE THIS COMMENT: function handleHWTest - user define test will be added here */
-		case "light sensor":
-			component = "light sensor";
-			intentObj.attributes.action = "read";
-			intentObj.attributes.pinType = "analog";
-			speechOutput = "Let's check the " + component + " is working. Tell me the pin number of Arduino you used.";
-			intentObj.emit(':ask', speechOutput);
-			break;
         case "tilt sensor":
             component = "tilt sensor";
             intentObj.attributes.action = "read";
@@ -1310,15 +1277,6 @@ function handleHWTest(intentObj, component) {
             intentObj.attributes.action = "write";
             intentObj.attributes.pinType = "analog";
             speechOutput = "Let's check the piezo is working. ";
-            speechOutput += "Tell me the pin number of Arduino you used.";
-            intentObj.emit(':ask', speechOutput);
-            break;
-        case "wind sensor":
-        case "anemometer":
-            component = "anemometer";
-            intentObj.attributes.action = "read";
-            intentObj.attributes.pinType = "analog";
-            speechOutput = "Let's check the wind sensor is working. ";
             speechOutput += "Tell me the pin number of Arduino you used.";
             intentObj.emit(':ask', speechOutput);
             break;
@@ -2418,7 +2376,7 @@ const taskHandler = {
                         data.pinId = "";
                         data.pinType = "";
                         elicitSlotForIntent.toPinType = true;
-                        this.attributes.speechOutput = "Sorry, you can pass analog data only to an analog target pin. Please give the correct instructions.";
+                        this.attributes.speechOutput = "Tell me the target pin number that can be used for analog.";
                         this.attributes.repromptSpeech = "You can use A0 to 5 or D3, 5, 6, 9, 10, 11.";
                     } else {
                         this.attributes.speechOutput = "Say the target pin id.";

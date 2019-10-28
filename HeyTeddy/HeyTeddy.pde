@@ -34,6 +34,7 @@ String[] getCode(String code)
   
   int start;
   int end;
+  boolean setupCode = false;
   
   if(code.indexOf("Reset all")>0) {
     start = code.indexOf("Reset all")+9;
@@ -45,17 +46,26 @@ String[] getCode(String code)
   
   List<String> codeAll = new ArrayList<String>();
   List<String> setup = new ArrayList<String>();
+  List<String> loop = new ArrayList<String>();
   
   Collections.addAll(codeAll, codeArray);
   
   for(int i=0; i< codeAll.size(); i++) {
     String codeStr = (String) codeAll.get(i);
-    if(codeStr.indexOf("pinMode") != -1) {
+    if(codeStr.indexOf("end-of") != -1) {
+      setup.add("\n");
+      setupCode = false;
+    } else if(codeStr.indexOf("pinMode") != -1) { //<>//
       setup.add("\t" + codeStr + "\n");
-      codeAll.remove(i); 
-    }
+      //codeAll.remove(i); 
+    } else if((codeStr.indexOf("Pulse") != -1) || (codeStr.indexOf("Do action") != -1) || setupCode) {
+      setup.add("\t" + codeStr + "\n");
+      setupCode = true;
+    } else {
+      loop.add("\t" + codeStr + "\n");
+    }      
   }
-
+/*
   for(int i=0; i<setup.size() ; i++) {
     compCurr = (String) setup.get(i);
     for(int j=1; j<setup.size()-1; j++) {
@@ -75,7 +85,7 @@ String[] getCode(String code)
         break;
       }
     }
-  }
+  }*/
   
   Iterator<String> iterator = setup.iterator();
   while (iterator.hasNext()) {
@@ -83,7 +93,13 @@ String[] getCode(String code)
     result[0] += string;
   }
   
-  result[1] = getLoopCode(codeAll);
+  iterator = loop.iterator();
+  while (iterator.hasNext()) {
+    String string = (String) iterator.next();
+    result[1] += string;
+  }
+  
+  //result[1] = getLoopCode(codeAll);
   
   return result;
 }
@@ -107,7 +123,7 @@ void mousePressed()
     String code[] = getCode(console.getCode());
 
     console.saveArduinoCode("./arduinoCode/arduinoCode.ino", code[0], code[1]);
-    String path = "/home/pi/Works/protalk/version03/Processing/Protalk/arduinoCode/arduinoCode.ino";
+    String path = "D:/Works/Git/HeyTeddy/HeyTeddy/arduinoCode/arduinoCode.ino";
     launch(path);
     println("launch");
   } else {

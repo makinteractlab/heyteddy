@@ -1,5 +1,5 @@
 {
-  "name": "skill-heyTeddy-nodejs",
+  "name": "skill-heyteddy-nodejs",
   "version": "1.0.0",
   "description": "heyTeddy skill.",
   "main": "index.js",
@@ -7,7 +7,7 @@
   "keywords": [
     "alexa",
     "skill",
-    "heyTeddy"
+    "heyteddy"
   ],
   "author": "Yoonji Kim",
   "license": "Apache-2.0",

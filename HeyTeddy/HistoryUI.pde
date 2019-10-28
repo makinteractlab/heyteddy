@@ -45,7 +45,7 @@ class Console implements Observer
 	public void update (Observable o, Object param) {
 		if (param instanceof Action) {
 			Action a = (Action)param;
-			lines= a + "\n" + lines;
+			lines = a + "\n" + lines;
       codes += a.toCode() + "\n";
 			consoleText.setText(lines);
       //codeText.setText(codes);
@@ -57,7 +57,7 @@ class Console implements Observer
   }
   
   void saveArduinoCode(String filename, String setup, String loop) {
-    String arduinoCode = "/*\n\tAuto-Generated Code by Protalk\n\t";
+    String arduinoCode = "/*\n\tAuto-Generated Code by HeyTeddy\n\t";
     arduinoCode += LocalDateTime.now();
     arduinoCode += "\n*/\n\n";
     arduinoCode += "void setup() {\n";

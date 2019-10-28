@@ -1,50 +1,26 @@
 {"commands": [
   {
-    "action": "reset",
-    "id": 2,
-    "params": {"pin": "A3"},
-    "timestamp": "Mon, 15 Jul 2019 10:51:40 GMT"
-  },
-  {
     "action": "show",
-    "id": 2,
-    "params": {"component": "wind sensor"},
-    "timestamp": "Tue, 06 Aug 2019 03:00:05 GMT"
-  },
-  {
-    "action": "read",
-    "id": 3,
-    "params": {
-      "pin": "A3",
-      "value": "pin"
-    },
-    "timestamp": "Tue, 06 Aug 2019 03:01:31 GMT"
+    "id": 1,
+    "params": {"component": "force sensor"},
+    "timestamp": "Fri, 25 Oct 2019 10:56:36 GMT"
   },
   {
     "action": "resetall",
-    "id": 4,
+    "id": 2,
     "params": {"pin": "all"},
-    "timestamp": "Tue, 06 Aug 2019 03:03:16 GMT"
+    "timestamp": "Fri, 25 Oct 2019 10:59:37 GMT"
   },
   {
-    "action": "read",
+    "action": "resetall",
     "id": 2,
-    "params": {
-      "pin": "A5",
-      "value": "pin"
-    },
-    "timestamp": "Tue, 06 Aug 2019 03:07:57 GMT"
+    "params": {"pin": "all"},
+    "timestamp": "Fri, 25 Oct 2019 10:59:45 GMT"
   },
   {
     "action": "show",
     "id": 3,
-    "params": {"component": "board"},
-    "timestamp": "Tue, 06 Aug 2019 03:10:28 GMT"
-  },
-  {
-    "action": "show",
-    "id": 4,
-    "params": {"component": "button"},
-    "timestamp": "Tue, 06 Aug 2019 03:10:49 GMT"
+    "params": {"component": "motor"},
+    "timestamp": "Fri, 25 Oct 2019 10:59:55 GMT"
   }
 ]}

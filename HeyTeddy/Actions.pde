@@ -255,6 +255,7 @@ class DoAfterAction extends Action {
     String code = "//" + toString() + "\n";
     code += "delay(" + time + ");\n";
     code += action.toCode();
+    code += "\n// end-of DoAfter \n";
     return code;
   }
 }
@@ -432,9 +433,8 @@ class Pipe extends RepeatedAction {
   String toCode() {
     String code = "//" + toString() + "\n";
     code += "int inputValue = 0;\n";
-    code += "pinMode(" + fromPin.getName().substring(1, fromPin.getName().length()) + ", INPUT);\n";
     code += "pinMode(" + toPin.getName().substring(1, toPin.getName().length()) + ", OUTPUT);\n";
-    code += "inputValue = analogRead(A" + fromPin.getName().substring(1, fromPin.getName().length()) + ");\n";
+    code += "inputValue = analogRead(" + fromPin.getName().substring(1, fromPin.getName().length()) + ");\n";
     code += "analogWrite(" + toPin.getName().substring(1, toPin.getName().length()) + ", inputValue" + ");\n";
     return code;
   }
@@ -502,14 +502,16 @@ class Pulse extends RepeatedAction {
   @Override
   String toCode() {
     String code = "//" + toString() + "\n";
+    code += "pinMode(" + pin.getName().substring(1, pin.getName().length()) + ", OUTPUT);\n";
     code += "int period = " + period + "; \n";
     code += "int times = " + times + "; \n";
     code += "for(int i=0; i<" + times + "; i++) { \n";
     code += "  delay(period); \n";
     code += "  digitalWrite(" + pin.getName().substring(1, pin.getName().length()) + ", HIGH);\n";
-    code += "  delay(period);";
+    code += "  delay(period); \n";
     code += "  digitalWrite(" + pin.getName().substring(1, pin.getName().length()) + ", LOW);\n";
     code += "}\n";
+    code += "// end-of Pulse \n";
     return code;
   }
 
