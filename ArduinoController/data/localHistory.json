@@ -1,0 +1,6 @@
+{"commands": [{
+  "action": "show",
+  "id": 3,
+  "params": {"component": "motor"},
+  "timestamp": "Fri, 25 Oct 2019 10:59:55 GMT"
+}]}
